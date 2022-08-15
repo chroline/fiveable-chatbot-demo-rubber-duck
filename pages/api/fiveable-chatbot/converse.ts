@@ -6,15 +6,17 @@ const quackPhrases = [
   "quack, quack",
   "quack!",
   "quack?",
-  "quack."
+  "quack.",
 ];
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-  let message = [];
+export default (_: NextApiRequest, res: NextApiResponse) => {
+  let message: string[] = [];
 
   for (let i = 0; i < 3; i++) {
     message.push(quackPhrases[Math.floor(Math.random() * quackPhrases.length)]);
   }
 
-  res.status(200).send(message.join(" "));
+  setTimeout(() => {
+    res.status(200).send(message.join(" "));
+  }, 1000 + Math.floor(Math.random() * 4000));
 };
