@@ -10,7 +10,7 @@ const quackPhrases = [
 ];
 
 export default (_: NextApiRequest, res: NextApiResponse) => {
-  let message = [];
+  let message: string[] = [];
 
   for (let i = 0; i < 3; i++) {
     message.push(quackPhrases[Math.floor(Math.random() * quackPhrases.length)]);
