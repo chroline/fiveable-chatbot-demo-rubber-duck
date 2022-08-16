@@ -9,7 +9,7 @@ const quackPhrases = [
   "quack."
 ];
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+export default (_: NextApiRequest, res: NextApiResponse) => {
   let message = [];
 
   for (let i = 0; i < 3; i++) {

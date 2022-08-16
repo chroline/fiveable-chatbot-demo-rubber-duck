@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+export default (_: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json({
     tag: "rubberduck",
     name: "Rubber Duck Debugger",
