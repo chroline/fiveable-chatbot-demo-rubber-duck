@@ -16,5 +16,5 @@ export default (_: NextApiRequest, res: NextApiResponse) => {
     message.push(quackPhrases[Math.floor(Math.random() * quackPhrases.length)]);
   }
 
-  res.status(200).send(message.join(" "));
+  setTimeout(() => res.status(200).send(message.join(" ")), 1000 + Math.floor(Math.random()*9000))
 };
